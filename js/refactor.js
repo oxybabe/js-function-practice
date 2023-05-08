@@ -32,7 +32,9 @@ function doSomethingCool() {
 }
 
 // Put your answer below -------------------------
-
+const doSomethingCool = function () {
+  console.log("Something Cool!");
+};
 
 // -----------------------------------------------
 
@@ -52,8 +54,16 @@ function sayHi() {
 setTimeout(sayHi, 2000);
 
 // Put your answer below -------------------------
+setTimeout(function() {
+  alert("Hello, World!");
+}, 2000);
 
 
+//const doSomethingInterval = setInterval(sayHi, 2000);
+
+//setTimeout(function ()) {
+//  alert("Hello, World!");
+//}, 2000);
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -82,10 +92,18 @@ letter = "z";
 console.log("The letter is", letter);
 
 // Put your answer below -------------------------
+var letter = "x";
 
+setTimeout(() => {
+  letter = "y";
+  console.log("The letter is", letter);
+}, 1);
+
+letter = "z";
+console.log("The letter is", letter);
 
 // -----------------------------------------------
-
+// letter z
 //////////////////////////////////////////////////
 //////////////////////////////////////////////////
 
@@ -95,18 +113,21 @@ console.log("The letter is", letter);
 // of the function is 5 lines of code. Refactor
 // this function to do the same thing with 1 line
 
-var reverseStr = function(str) {
-  var arr;
-  arr = str.split("");
-  arr = arr.reverse();
-  str = arr.join("");
-  return str;
-};
+  function reverseStr(str) {
+    var arr;
+    arr = str.split("");
+    arr = arr.reverse();
+    str = arr.join("");
+    return str;
+  }
 
 // Put your answer below -------------------------
 
-
-
+function reverseStr(...args: [str: any]) {
+  var arr;
+// var reverseStr = function (str) {
+  //return str.split("").reverse().join("");
+//}
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -141,9 +162,34 @@ var spanishColor = function(colorName) {
 // Put your answer below -------------------------
 
 
-
+  function spanishColor(colorName) {
+    if (colorName.toLowerCase() === "rojo") {
+      return "#ff0000";
+    }
+    else if (colorName.toLowerCase() === "blanco") {
+      return "#ffffff";
+    }
+    else if (colorName.toLowerCase() === "azul") {
+      return "#0000ff";
+    }
+    else if (colorName.toLowerCase() === "verde") {
+      return "#00ff00";
+    }
+    else if (colorName.toLowerCase() === "negro") {
+      return "#000000";
+    }
+  }
 // -----------------------------------------------
-
+// spanishColor = function(colorName) {
+  //const colors = {
+    rojo:"#ff0000",
+    blanco: "#ffffff",
+    azul: "#0000ff",
+    verde: "00ff00",
+    negro: "#00000",
+  };
+}
+//return colors[colorName];
 //////////////////////////////////////////////////
 //////////////////////////////////////////////////
 
@@ -158,7 +204,8 @@ var foo = "bar";
 
 // Put your answer below -------------------------
 
-
+//let foo;
+//foo = "bar";
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -182,7 +229,10 @@ var callTenTimes = function(callback) {
 
 // Put your answer below -------------------------
 
-
+//var callNtimes = function(callback, i) {
+  //var range = Array.from(Array(i)).keys());
+  //range.forEach(callback);
+//};
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -210,7 +260,17 @@ var decreaseScore = function() {
 
 // Put your answer below -------------------------
 
+//(function () {}
+//var score = 0;
 
+//var increaseScore = function() {
+  score++;
+//};
+
+//var decreaseScore = function() {
+ // score--;
+//};
+//)();
 
 // -----------------------------------------------
 
@@ -231,7 +291,12 @@ var twoPlusTwo = addNumbers(2,2);
 
 // Put your answer below -------------------------
 
+//var addNumbers = function(numberA, numberB) {
+ // console.log(numberA + numberB);
+  //return numberA + numberB;
+//};
 
+//var twoPlusTwo = addNumbers(2,2);
 
 // -----------------------------------------------
 
@@ -258,8 +323,15 @@ var accelerate = function(amount) {
 
 // Put your answer below -------------------------
 
+//
+// undefined + a number returns NaN
+//accelerate(50);
+//acclerate();
 
-
+//var speed = 0;
+//var accelerate = function (amount = 1) {
+  //speed += amount;
+//};
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
